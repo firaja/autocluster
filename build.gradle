@@ -1,0 +1,25 @@
+plugins {
+    id "java"
+    id "io.freefair.aspectj" version "5.1.1"
+}
+
+group "org.autocluster"
+version "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+
+}
+
+sourceSets.main.aspectj.srcDir "src/main/java"
+sourceSets.main.java.srcDirs = files()
+
+dependencies {
+    implementation "org.aspectj:aspectjrt:1.9.6"
+    implementation "org.aspectj:aspectjweaver:1.9.6"
+    implementation "org.aspectj:aspectjtools:1.9.6"
+    implementation 'org.springframework:spring-context:5.3.8'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5'
+}
+
